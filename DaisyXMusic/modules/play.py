@@ -451,7 +451,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("ytt") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -720,7 +720,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Playing** here the song requested by {} via Youtube Music".format(
                 message.from_user.mention()
             ),
         )
@@ -868,7 +868,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Playing** here the song requested by {} via Youtube Music".format(
                 message.from_user.mention()
             ),
         )
@@ -1256,7 +1256,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music 😜",
+            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music",
         )
         
         os.remove("final.png")
