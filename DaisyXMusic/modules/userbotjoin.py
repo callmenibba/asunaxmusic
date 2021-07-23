@@ -14,7 +14,6 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
@@ -38,7 +37,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "MusicBot"
 
     try:
         await USER.join_chat(invitelink)
@@ -51,7 +50,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @sabervcmusicbotassitant to your Group and try again</b>",
         )
         return
     await message.reply_text(
@@ -112,7 +111,7 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "MusicBot"
 
     try:
         await USER.join_chat(invitelink)
@@ -126,10 +125,9 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @sabervcmusicbotassitant to your Group and try again</b>",
         )
         return
     await message.reply_text(
         "<b>helper userbot joined your channel</b>",
     )
-    
