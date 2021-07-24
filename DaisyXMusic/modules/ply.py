@@ -7,7 +7,7 @@ from DaisyXMusic.services.queues import queues
 from DaisyXMusic.services.callsmusic import callsmusic
 
 from DaisyXMusic.services.converter.converter import convert as converter
-from downloaders import youtube
+from DaisyXMusic.services.downloaders import youtube
 
 from DaisyXMusic.config import BOT_NAME as bn, DURATION_LIMIT
 from DaisyXMusic.helpers.filters import command, other_filters
