@@ -6,7 +6,7 @@ from pyrogram.types import Message, Voice
 from DaisyXMusic.services.queues import queues
 from DaisyXMusic.services.callsmusic import callsmusic
 
-import converter
+from DaisyXMusic.services.converter.converter import convert as converter
 from downloaders import youtube
 
 from DaisyXMusic.config import BOT_NAME as bn, DURATION_LIMIT
